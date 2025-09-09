@@ -25,20 +25,15 @@ conda info
 
 # Pick the most recent checkpoint directory (if any)
 ckpt_pattern="${SAVE_ROOT}/checkpoint-*"
-# Pick the most recent checkpoint directory (if any)
 LATEST_CKPT=$(ls -d $ckpt_pattern 2>/dev/null | sort -V | tail -n 1)
-SECOND_LATEST_CKPT=$(ls -d  $ckpt_pattern 2>/dev/null | sort -V | head -n 1)
 
 if [[ -n "${LATEST_CKPT}" && -d "${LATEST_CKPT}" ]]; then
-    echo "🟢 Found checkpoint -> ${LATEST_CKPT}.  Resuming training."
+    echo "🟢 Found checkpoint -> ${LATEST_CKPT}. Resuming training."
     EXTRA_ARGS="resume_from_checkpoint=${LATEST_CKPT}"
-    EXTRA_ARGS_BACKUP="resume_from_checkpoint=${SECOND_LATEST_CKPT}"
 else
-    echo "🟡 No previous checkpoint found.  Starting from scratch."
+    echo "🟡 No previous checkpoint found. Starting from scratch."
     EXTRA_ARGS=""
 fi
 
-# NOTE: put overrides *after* the yaml file so they win.
 llamafactory-cli train "${CONFIG}" ${EXTRA_ARGS} >> "$LOGFILE" 2>&1
-# This will run only if the first run fails
-llamafactory-cli train "${CONFIG}" ${EXTRA_ARGS_BACKUP} >> "$LOGFILE" 2>&1
+
