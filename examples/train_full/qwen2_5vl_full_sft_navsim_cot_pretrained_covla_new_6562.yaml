@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: Qwen/Qwen2.5-VL-3B-Instruct
+model_name_or_path: rdesc/covla_new_6562
 image_max_pixels: 65536
 video_max_pixels: 16384
 trust_remote_code: true
@@ -24,9 +24,10 @@ dataloader_num_workers: 32
 tokenized_path: /home/jovyan/workspace/saves/dataset/full_cot_navsim
 
 ### output
-output_dir: /home/jovyan/workspace/saves/qwen2_5_vl-3b/full/qwen2_5vl_full_sft_navsim_cot
+output_dir: /home/jovyan/workspace/saves/qwen2_5_vl-3b/full/qwen2_5vl_full_sft_navsim_cot_pretrained_covla_new_6562
 logging_steps: 10
-save_steps: 200
+save_strategy: epoch
+# save_steps: 200
 save_total_limit: 2
 save_only_model: false
 plot_loss: true
@@ -45,4 +46,4 @@ resume_from_checkpoint: null
 
 # wandb
 report_to: wandb
-run_name: qwen2_5vl_sft_full_cot_navsim
+run_name: qwen2_5vl_full_sft_navsim_cot_pretrained_covla_new_6562
