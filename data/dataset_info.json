@@ -1,5 +1,65 @@
 {
-    "full_cot_navsim": {
+  "full_50p_cot_navsim_waymo_mix_3_frames": {
+    "file_name": "full_50p_cot_navsim_waymo_mix_3_frames.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
+  "full_50p_cot_navsim_3_frames": {
+    "file_name": "full_50p_cot_navsim_3_frames.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
+  "full_no_cot_navsim_3_frames": {
+    "file_name": "full_no_cot_navsim_3_frames.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
+  "full_no_cot_navsim": {
+    "file_name": "full_no_cot_navsim.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },  
+  "full_cot_navsim": {
     "file_name": "full_cot_navsim.json",
     "formatting": "sharegpt",
     "columns": {

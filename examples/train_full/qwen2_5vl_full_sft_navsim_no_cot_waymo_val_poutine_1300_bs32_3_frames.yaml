@@ -14,17 +14,17 @@ freeze_multi_modal_projector: false  # choices: [true, false]
 deepspeed: examples/deepspeed/ds_z2_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
 
 ### dataset
-dataset: full_cot_navsim
+dataset: full_no_cot_navsim_3_frames
 template: qwen2_vl
 cutoff_len: 131072
 max_samples: 10000000
 overwrite_cache: false
 preprocessing_num_workers: 128
 dataloader_num_workers: 32
-tokenized_path: /home/jovyan/workspace/saves/dataset/full_cot_navsim
+tokenized_path: /home/jovyan/workspace/saves/dataset/full_no_cot_navsim_3_frames_2 # not sure why we need different path here for this checkpoint
 
 ### output
-output_dir: /home/jovyan/workspace/saves/qwen2_5_vl-3b/full/qwen2_5vl_full_sft_navsim_cot_waymo_val_poutine_1300_bs32
+output_dir: /home/jovyan/workspace/saves/qwen2_5_vl-3b/full/qwen2_5vl_full_sft_navsim_no_cot_waymo_val_poutine_1300_bs32_3_frames
 logging_steps: 10
 save_strategy: epoch
 # save_steps: 200
@@ -46,4 +46,4 @@ resume_from_checkpoint: null
 
 # wandb
 report_to: wandb
-run_name: qwen2_5vl_full_sft_navsim_cot_waymo_val_poutine_1300_bs32
+run_name: qwen2_5vl_full_sft_navsim_no_cot_waymo_val_poutine_1300_bs32_3_frames

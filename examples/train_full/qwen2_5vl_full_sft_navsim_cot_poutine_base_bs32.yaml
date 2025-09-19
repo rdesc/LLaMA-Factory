@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: rdesc/waymo_val_from_multistep_covla_1300
+model_name_or_path: rdesc/Qwen2.5-VL_waymo_multistep_covla_pretraining_10400
 image_max_pixels: 262144
 video_max_pixels: 16384
 trust_remote_code: true
@@ -24,7 +24,7 @@ dataloader_num_workers: 32
 tokenized_path: /home/jovyan/workspace/saves/dataset/full_cot_navsim
 
 ### output
-output_dir: /home/jovyan/workspace/saves/qwen2_5_vl-3b/full/qwen2_5vl_full_sft_navsim_cot_waymo_val_poutine_1300_bs32
+output_dir: /home/jovyan/workspace/saves/qwen2_5_vl-3b/full/qwen2_5vl_full_sft_navsim_cot_poutine_base_bs32
 logging_steps: 10
 save_strategy: epoch
 # save_steps: 200
@@ -46,4 +46,4 @@ resume_from_checkpoint: null
 
 # wandb
 report_to: wandb
-run_name: qwen2_5vl_full_sft_navsim_cot_waymo_val_poutine_1300_bs32
+run_name: qwen2_5vl_full_sft_navsim_cot_poutine_base_bs32
